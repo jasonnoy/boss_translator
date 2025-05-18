@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>反馈建议 - 解语花</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dark-container">
+        <header>
+            <div class="logo"><a href="index.html">解语花</a></div>
+        </header>
+        
+        <main class="feedback-page">
+            <section class="feedback-section">
+                <h2 class="section-title">情绪值</h2>
+                <div class="emotion-card">
+                    <div class="emotion-icons">
+                        <span class="emoji">😠</span>
+                        <span class="emoji">😠</span>
+                        <span class="emoji">😠</span>
+                    </div>
+                    <div class="emotion-text">老板对设计非常不满意，建议全面改进</div>
+                </div>
+            </section>
+            
+            <section class="feedback-section">
+                <h2 class="section-title">修改建议</h2>
+                <div class="suggestions-container">
+                    <div class="suggestion-card yellow-top">
+                        <h3 class="suggestion-title">色彩调整</h3>
+                        <p class="suggestion-text">在保持整体色调的基础上，加入一些明亮的点缀色，如淡黄色、淡紫蓝、淡红蓝微粉等。用于按钮、图标或重要文本，以增加吸引力。</p>
+                    </div>
+                    
+                    <div class="suggestion-card cyan-top">
+                        <h3 class="suggestion-title">增加层级感</h3>
+                        <p class="suggestion-text">利用饱和度（Glassmorphism）效果，为卡片/重要框添加模糊背景和阴影，营造出浮起感，引入3D元素或深浅变化，增加页面的深度和空间感。</p>
+                    </div>
+                    
+                    <div class="suggestion-card purple-top">
+                        <h3 class="suggestion-title">增加互动性</h3>
+                        <p class="suggestion-text">为按钮和图标添加悬停动画或点击动画，提供用户及时反馈。引入微动画（Micro-interactions），如加载动画、切换动画等等，使页面更具活力。</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="feedback-section">
+                <h2 class="section-title">参考案例</h2>
+                <div class="examples-container">
+                    <div class="example-card">
+                        <img class="example-image" src="" alt="参考案例1">
+                        <div class="example-content">
+                            <p class="example-desc">加载中...</p>
+                            <div class="example-source">来源: <a href="#" target="_blank">加载中...</a></div>
+                        </div>
+                    </div>
+                    <div class="example-card">
+                        <img class="example-image" src="" alt="参考案例2">
+                        <div class="example-content">
+                            <p class="example-desc">加载中...</p>
+                            <div class="example-source">来源: <a href="#" target="_blank">加载中...</a></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="feedback-section">
+                <h2 class="section-title">优化方案</h2>
+                <div class="optimization-container">
+                    <div class="optimization-card">
+                        <div class="optimization-header">
+                            <h3 class="optimization-title">方案一：GPT优化</h3>
+                            <button class="generate-btn" id="gpt4-btn">生成优化</button>
+                        </div>
+                        <div class="optimization-content" id="gpt4-content">
+                            <div class="optimization-placeholder">
+                                <p>基于GPT-4o的智能优化，结合老板反馈进行针对性修改</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="optimization-card">
+                        <div class="optimization-header">
+                            <h3 class="optimization-title">方案二：MidJourney优化</h3>
+                            <button class="generate-btn" id="mj-btn">生成创意</button>
+                        </div>
+                        <div class="optimization-content" id="mj-content">
+                            <div class="optimization-placeholder">
+                                <p>基于MidJourney的创意重构，提供全新设计灵感</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="feedback-section">
+                <h2 class="section-title">润色</h2>
+                <div class="polished-card">
+                    <textarea placeholder="输入你要回复老板的话" id="userInput"></textarea>
+                </div>
+                
+                <!-- 生成后的文案框，初始隐藏 -->
+                <div class="result-card" id="resultCard" style="display: none;">
+                    <div class="result-title">优化后的文案</div>
+                    <div class="result-content" id="resultContent"></div>
+                </div>
+            </section>
+            
+            <div class="button-container">
+                <button type="button" class="generate-button" id="generateBtn">生成</button>
+            </div>
+            
+            <!-- Toast提示 -->
+            <div class="toast" id="toast">生成中...</div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 

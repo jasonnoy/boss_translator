@@ -1,0 +1,927 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #121212;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 登录页样式 */
+.landing-container {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background:  url(/Users/v-phoebe/Desktop/解语花/assets/beijing.png),
+    url(/Users/v-phoebe/Desktop/解语花/assets/beijing2.png),
+    url(/Users/v-phoebe/Desktop/解语花/assets/beijing3.png),
+    linear-gradient(to bottom right, #080618, #080618);
+    background-size: 50% 50%,80% 80%,80% 80%,100% 100%;
+    background-position: 0 0,90% 10%,-120% 260%, 0 0;
+    background-repeat: no-repeat,no-repeat,no-repeat;
+}
+
+header {
+    padding: 20px 40px;
+    z-index: 2;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.logo a:hover {
+    opacity: 0.8;
+}
+
+.landing-content {
+    position: relative;
+    min-height: calc(100vh - 80px);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+  
+}
+
+/* 浮动元素 */
+.floating-avatar {
+    position: absolute;
+    left: 24%;
+    top: 15%;
+    z-index: 10;
+    background: #fff;
+    backdrop-filter: blur(5px);
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.avatar-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    overflow: hidden;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dynamic-text {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    position: relative;
+    display: inline-block;
+}
+
+.floating-feature {
+    position: absolute;
+    right: 24%;
+    top: 15%;
+    z-index: 10;
+    background: #fff;
+    backdrop-filter: blur(5px);
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.feature-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    overflow: hidden;
+}
+
+.feature-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feature-text {
+    white-space: nowrap;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* 花朵容器 */
+.flower-container {
+    position: relative;
+    margin-top: 0%;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.ti-container {
+    position: relative;
+    margin-top: 4%;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.biao-container {
+    position: relative;
+    margin-top: 6%;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.beijing-container {
+    position: relative;
+    margin-top: 0%;
+    z-index: 5;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+}
+.ti-img {
+    width: 600px;
+    height: auto;
+    max-width: 90%;
+}
+
+.flower-img {
+    width: 700px;
+    height: auto;
+    max-width: 90%;
+}
+
+.beijing-img {
+    width: 600px;
+    height: auto;
+    max-width: 90%;
+}
+
+
+/* 标题区域 */
+.hero-title {
+    text-align: center;
+    margin-top: -300px;
+    z-index: 3;
+    position: relative;
+}
+
+.main-title {
+    font-size: 4.5rem;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, #c299fc, #7f9bff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.subtitle {
+    font-size: 8rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.1);
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+    margin-top: -100px;
+}
+
+.description {
+    max-width: 800px;
+    font-weight: lighter;
+    margin: 0 auto 40px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* 通用按钮样式 */
+.cta-button, .resolve-button, .generate-button {
+    display: inline-block;
+    background: linear-gradient(to right, #5E33F1, #BA9EF7);
+    color: #fff;
+    padding: 15px 70px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover, .resolve-button:hover, .generate-button:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(128, 49, 255, 0.5);
+}
+
+/* 设备展示区域 */
+.showcase-section {
+    width: 100%;
+    height: 550px;
+    position: relative;
+    margin: 300px 0 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.device-wrapper {
+    position: relative;
+    width: 1100px;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.showcase-device {
+    position: absolute;
+    border-radius: 80px;
+    overflow: hidden;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease-out;
+}
+
+.showcase-device img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.device1 {
+    width: 350px;
+    height: 400px;
+    left: -40px;
+    top: -200px;
+    z-index: 2;
+    
+}
+
+.device2 {
+    width: 740px;
+    height: 540px;
+    left: 160px;
+    top: 0;
+    z-index: 3;
+    
+}
+
+.device3 {
+    width: 320px;
+    height: 300px;
+    right:-20px;
+    top: -120px;
+    z-index: 4;
+   
+}
+
+.device4 {
+    width: 220px;
+    height: 220px;
+    left: 100px;
+    bottom: -60px;
+    z-index: 5;
+
+}
+
+.device1:hover, .device2:hover, .device3:hover, .device4:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 100px rgba(77, 0, 209, 0.5);
+}
+
+/* 底部区域 */
+.bottom-section {
+    text-align: center;
+    margin-top: -20px;
+    padding: 0px 20px;
+    position: relative;
+    z-index: 5;
+}
+
+.subtitle-text {
+    color: #999;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.secondary-title {
+    font-size: 3rem;
+    margin-bottom: 25px;
+    background: linear-gradient(to right, #c299fc, #7f9bff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.description-secondary {
+    max-width: 800px;
+    font-weight: lighter;
+    margin: 0 auto 40px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+.secondary-button {
+    margin-top: 40px;
+    margin-bottom:200px
+}
+
+/* 深色主题容器 */
+.dark-container {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background:  url(/Users/v-phoebe/Desktop/解语花/assets/beijing.png),
+    url(/Users/v-phoebe/Desktop/解语花/assets/beijing2.png),
+    url(/Users/v-phoebe/Desktop/解语花/assets/beijing3.png),
+    linear-gradient(to bottom right, #080618, #080618);
+    background-size: 50% 50%,80% 80%,80% 80%,100% 100%;
+    background-position: 0 0,90% 10%,-120% 260%, 0 0;
+    background-repeat: no-repeat,no-repeat,no-repeat;
+    padding: 20px;
+}
+
+/* 上传页面样式 - 新版本 */
+.upload-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 30px;
+}
+
+.upload-box {
+    width: 100%;
+    height: 45vh;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+}
+
+.upload-area {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.upload-button {
+    background: #5d4bb7;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.upload-area:hover .upload-button {
+    background: #6b5ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(107, 94, 216, 0.3);
+}
+
+.text-input-box {
+    width: 100%;
+    height: 25vh;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    padding: 20px;
+    color: #ccc;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* 图片预览 */
+.upload-area.with-image {
+    padding: 0;
+}
+
+.upload-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* 新版反馈页面样式 */
+.feedback-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.feedback-section {
+    width: 100%;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* 情绪值卡片 */
+.emotion-card {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 25px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.emotion-icons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 15px;
+}
+
+.emoji {
+    font-size: 50px;
+}
+
+.emotion-text {
+    color: #afafaf;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* 修改建议卡片 */
+.suggestions-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    position: relative; /* 确保容器有定位上下文 */
+}
+
+.suggestion-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: visible; /* 允许横条超出卡片 */
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    position: relative;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1;
+}
+
+.suggestion-card::after {
+    content: '';
+    position: absolute;
+    top: -6px; /* 向上露出10px */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px; /* 略微减小宽度 */
+    height: 10px; /* 略微减小高度 */
+    border-radius: 8px;
+    z-index: -1;
+    
+}
+
+.yellow-top::after {
+    background: linear-gradient(to right, #deb045, #ffd166);
+   /* 负值确保在卡片下方 */
+
+}
+
+.cyan-top::after {
+    background: linear-gradient(to right, #25b1c1, #3ec1cf);
+   
+}
+
+.purple-top::after {
+    background: linear-gradient(to right, #9747FF, #b26bff);
+    
+}
+
+.suggestion-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 40px;
+    text-align: center;
+}
+
+.suggestion-text {
+    padding: 0 24px 24px;
+    color: #afafaf;
+    font-size: 13px;
+    line-height: 2;
+}
+
+/* 参考案例卡片 */
+.examples-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.example-card {
+    position: relative;
+    height: 320px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.example-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.example-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.example-content {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    max-height: 140px;
+    overflow: hidden;
+}
+
+.example-desc {
+    color: #e0e0e0;
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    line-height: 1.5;
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 100px;
+    padding-right: 5px;
+    scrollbar-width: thin;
+    scrollbar-color: #9747FF rgba(255, 255, 255, 0.1);
+}
+
+.example-desc::-webkit-scrollbar {
+    width: 4px;
+}
+
+.example-desc::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.example-desc::-webkit-scrollbar-thumb {
+    background-color: #9747FF;
+    border-radius: 4px;
+}
+
+.example-source {
+    font-size: 12px;
+    color: #888;
+    margin-top: auto;
+    text-decoration: none;
+}
+
+.example-source a {
+    color: #9747FF;
+    text-decoration: none;
+}
+
+.example-source a:hover {
+    text-decoration: underline;
+}
+
+.loading-examples {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 16px;
+    grid-column: span 2;
+}
+
+.loading-error {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: #ff6b6b;
+    font-size: 16px;
+    grid-column: span 2;
+}
+
+/* 润色卡片 */
+.polished-card {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    height: 150px;
+    backdrop-filter: blur(5px);
+    margin-bottom: 20px;
+}
+
+/* 结果文案卡片 */
+.result-card {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 20px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(138, 43, 226, 0.2);
+}
+
+.result-title {
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(138, 43, 226, 0.1);
+}
+
+.result-content {
+    padding: 20px;
+    color: #ccc;
+    font-size: 16px;
+    line-height: 1.6;
+    min-height: 100px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px 0;
+    color: #777;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .landing-content {
+        padding: 10px;
+    }
+    
+    .floating-avatar, .floating-feature {
+        position: static;
+        margin: 10px auto;
+    }
+    
+    .flower-img {
+        max-width: 80%;
+    }
+    
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 2rem;
+    }
+    
+    .secondary-title {
+        font-size: 1.8rem;
+    }
+    
+    .upload-page {
+        padding: 10px;
+    }
+    
+    .upload-box {
+        height: 35vh;
+    }
+    
+    .text-input-box {
+        height: 25vh;
+    }
+    
+    .suggestions-container,
+    .examples-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .button-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .back-button, .submit-button, .save-button {
+        width: 100%;
+    }
+}
+
+/* Toast提示 */
+.toast {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    z-index: 9999;
+    font-size: 16px;
+    display: none;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* 优化方案卡片 */
+.optimization-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.optimization-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    min-height: 320px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.optimization-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.optimization-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.generate-btn {
+    background: linear-gradient(to right, #5E33F1, #BA9EF7);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.generate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(94, 51, 241, 0.3);
+}
+
+.generate-btn:disabled {
+    background: #666;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.optimization-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 260px;
+}
+
+.optimization-result {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.optimization-result img {
+    max-width: 100%;
+    max-height: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.optimization-placeholder {
+    color: #888;
+    text-align: center;
+    padding: 20px;
+}
+
+.optimization-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-left-color: #5E33F1;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+.loading-text {
+    color: #ccc;
+    font-size: 14px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+} 

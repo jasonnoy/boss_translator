@@ -1,0 +1,23 @@
+{
+  "name": "website-screenshot-service",
+  "version": "1.0.0",
+  "description": "A service to generate screenshots of websites using Puppeteer",
+  "main": "screenshot-service.js",
+  "scripts": {
+    "start": "node screenshot-service.js",
+    "dev": "nodemon screenshot-service.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "puppeteer": "^21.3.8"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "author": "",
+  "license": "MIT"
+} 

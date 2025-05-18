@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>内容上传 - 解语花</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dark-container">
+        <header>
+            <div class="logo"><a href="index.html">解语花</a></div>
+        </header>
+        
+        <main class="upload-page">
+            <div class="upload-box">
+                <div class="upload-area" id="image-upload">
+                    <div class="upload-button">点击/拖拽设计稿</div>
+                </div>
+                <input type="file" id="image-input" accept="image/*" hidden>
+            </div>
+            
+            <div class="text-input-box">
+                <textarea id="text-input" placeholder="请输入设计类型和内容描述，以及老板反馈"></textarea>
+            </div>
+            
+            <div class="button-container">
+                <button type="button" class="resolve-button" id="resolve-button">一键解读</button>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 

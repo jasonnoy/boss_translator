@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  screenshot-service:
+    build: .
+    container_name: screenshot-service
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./cache:/app/cache
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s 
